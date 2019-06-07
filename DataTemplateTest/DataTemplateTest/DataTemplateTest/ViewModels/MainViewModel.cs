@@ -27,12 +27,6 @@ namespace DataTemplateTest.ViewModels
             this.Courses = courseList;
         }
 
-        public int RandomNumber(int min, int max)
-        {
-            Random random = new Random();
-            return random.Next(min, max);
-        }
-
         private ObservableCollection<Course> courses;
         public ObservableCollection<Course> Courses
         {
