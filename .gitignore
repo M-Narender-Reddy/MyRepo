@@ -3,3 +3,8 @@
 ################################################################################
 
 /DataTemplateTest/DataTemplateTest/DataTemplateTest/bin/Debug/netstandard2.0
+/DataTemplateTest/DataTemplateTest/DataTemplateTest/obj
+/DataTemplateTest/DataTemplateTest/DataTemplateTest.Android/bin/Debug
+/DataTemplateTest/DataTemplateTest/DataTemplateTest.Android/obj
+/DataTemplateTest/.vs/DataTemplateTest/v15
+/.vs

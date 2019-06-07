@@ -1,0 +1,85 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ViewCell xmlns="http://xamarin.com/schemas/2014/forms"
+          xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+          x:Class="DataTemplateTest.CourseViewCell">
+    <ViewCell.View>
+        <Frame  x:Name="CourseFrame"
+                CornerRadius="5"
+                Padding="0"
+                HasShadow="True"
+                IsClippedToBounds="True"               
+                BackgroundColor="White">
+            <Grid RowSpacing="0"
+                  HorizontalOptions="FillAndExpand">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"></RowDefinition>
+                    <RowDefinition Height="Auto"></RowDefinition>
+                    <RowDefinition Height="Auto"></RowDefinition>
+                    <RowDefinition Height="Auto"></RowDefinition>
+                    <RowDefinition Height="Auto"></RowDefinition>
+                </Grid.RowDefinitions>
+                <StackLayout Grid.Row="0"
+                             IsClippedToBounds="True">
+                    <Image  x:Name="CourseImage"
+                                                 Aspect="AspectFill"
+                                                 HorizontalOptions="Fill"
+                                                 VerticalOptions="Start"
+                                                 HeightRequest="171"
+                                                 Source="{Binding CourseImage}"
+                                                ></Image>
+                </StackLayout>
+                <Label Grid.Row="1"
+                       x:Name="CourseName"
+                       HorizontalTextAlignment="Start"
+                       VerticalTextAlignment="Start"
+                       VerticalOptions="StartAndExpand"
+                       FontSize="Large"
+                       FontAttributes="None"
+                       TextColor="Black"
+                       HorizontalOptions="Fill"
+                       Text="{Binding CourseName}"
+                       Margin="15,5,10,0"
+                       LineBreakMode="TailTruncation">
+                    
+                </Label>
+                
+                <Label x:Name="CategoryName"
+                       Grid.Row="2"
+                       Text="{Binding CategoryName}"
+                       FontSize="Small"
+                       FontAttributes="None"
+                       TextColor="Black"
+                       HorizontalOptions="Fill"
+                       Margin="15,0,10,0"
+                       LineBreakMode="TailTruncation" />
+                
+                <StackLayout Orientation="Horizontal"
+                             Grid.Row="3"
+                             HorizontalOptions="Fill"
+                             Margin="5,5,10,0">
+                    <Label  Text="{Binding CompletionPercentage, Converter={StaticResource PercentageToText}}"
+                            FontSize="Micro"
+                            FontAttributes="None"
+                            TextColor="Black"
+                            HorizontalOptions="EndAndExpand"
+                            HorizontalTextAlignment="End"
+                            VerticalOptions="Center"
+                            LineBreakMode="TailTruncation" />
+                </StackLayout>
+
+                <StackLayout Grid.Row="4"
+                             Margin="0,12,0,0"
+                             x:Name="ProgressStack"
+                             HeightRequest="8"
+                             Spacing="0"
+                             Padding="0"
+                             VerticalOptions="StartAndExpand"
+                             HorizontalOptions="FillAndExpand"
+                             IsClippedToBounds="True"
+                             BackgroundColor="Black">
+                </StackLayout>
+                
+            </Grid>
+        </Frame>
+    </ViewCell.View>
+</ViewCell>

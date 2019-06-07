@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:DataTemplateTest"
+             xmlns:converters="clr-namespace:DataTemplateTest.Converters"
+             x:Class="DataTemplateTest.MainPage">
+
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <converters:PercentageToTextCoverter x:Key="PercentageToText" />
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+    <StackLayout>
+        <ListView HasUnevenRows="True" ItemsSource="{Binding Courses}" CachingStrategy="RecycleElementAndDataTemplate">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <local:CourseViewCell></local:CourseViewCell>
+                    <!--<ViewCell>
+                        <StackLayout Margin="10">
+                            <Label Text="{Binding CourseName}" HorizontalOptions="Fill" HorizontalTextAlignment="Start" FontSize="Medium" TextColor="Black" Margin="5"></Label>
+                            <Label Text="{Binding CompletionPercetage, Converter={StaticResource PercentageToText}}" HorizontalOptions="Fill" HorizontalTextAlignment="End" 
+                                   FontSize="Small" TextColor="Black"></Label>
+                        </StackLayout>
+                    </ViewCell>-->
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </StackLayout>
+
+</ContentPage>
